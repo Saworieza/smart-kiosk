@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150228231134) do
+ActiveRecord::Schema.define(version: 20150228233557) do
 
   create_table "devices", force: :cascade do |t|
     t.integer  "user_id"
@@ -39,11 +39,13 @@ ActiveRecord::Schema.define(version: 20150228231134) do
     t.datetime "updated_at"
     t.integer  "store_id"
     t.string   "beacon_uuid",            default: "", null: false
+    t.integer  "vendor_id"
   end
 
   add_index "kiosks", ["reset_password_token"], name: "index_kiosks_on_reset_password_token", unique: true
   add_index "kiosks", ["store_id"], name: "index_kiosks_on_store_id"
   add_index "kiosks", ["unique_id"], name: "index_kiosks_on_unique_id", unique: true
+  add_index "kiosks", ["vendor_id"], name: "index_kiosks_on_vendor_id"
 
   create_table "stores", force: :cascade do |t|
     t.string   "address",    default: "", null: false

@@ -200,17 +200,23 @@ button.close {
         font-size: 2rem;
         margin-right: 10px;
       }
-     }
-     &:hover {
+      &:hover {
+        color: #4F8EF7;
+      };
+    }
+    &:hover {
       cursor: pointer;
       background: $d-sidebar;
-     };
-    }
-    li.active {
-      border-left: 3px solid #3c8dbc;
-      background: $d-sidebar;
+    };
+  }
+  li.active {
+    border-left: 3px solid #3c8dbc;
+    background: $d-sidebar;
+    a {
+      color: #4F8EF7;
     }
   }
+}
 }
 
 .top-users {
