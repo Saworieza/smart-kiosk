@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
-  
+
   devise_for :vendors
-  root 'static_pages#index'
+
+  authenticated :vendor do
+    root to: "vendors#index", as: "vendor_home"
+  end
+  unauthenticated :vendor do
+    root 'static_pages#index'
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
