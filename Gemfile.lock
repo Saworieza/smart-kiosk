@@ -135,6 +135,7 @@ GEM
       json (~> 1.8)
       multi_xml (>= 0.5.2)
     i18n (0.7.0)
+    ionicons-rails (2.0.0)
     jquery-rails (4.0.3)
       rails-dom-testing (~> 1.0)
       railties (>= 4.2.0)
@@ -319,6 +320,7 @@ DEPENDENCIES
   gcm
   guard
   guard-rspec (~> 4.2.8)
+  ionicons-rails
   jquery-rails
   letter_opener
   pg

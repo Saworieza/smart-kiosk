@@ -64,6 +64,7 @@ gem 'active_model_serializers'
 gem 'sidekiq'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'gcm'
+gem 'ionicons-rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

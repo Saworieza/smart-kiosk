@@ -10,6 +10,7 @@ body {
 .navbar {
   background: $navbar;
   color: $white;
+  border: none;
   a {
     color: $white !important;
   }
@@ -34,4 +35,100 @@ body {
     font-size: 2.5rem;
     color: $l-text;
   }
+}
+
+.left-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  margin-top: 40px;
+  padding: 20px;
+  background: $sidebar;
+}
+
+.right-relative {
+  position: absolute;
+  right: 0;
+  padding-right: 2%;
+}
+
+@media(max-width:992px) {
+  .left-fixed {
+    position: relative;
+  }
+
+  .right-relative {
+    position: relative;
+    padding: 10px 50px;
+  }
+}
+
+.stats {
+  .info-box {
+    display: block;
+    min-height: 90px;
+    background: #fff;
+    width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+    border: 1px solid $border;
+    margin-bottom: 15px;
+    color: $white;
+    small {
+      font-size: 14px;
+    }
+    .info-box-icon {
+      border-radius: 0;
+      display: block;
+      float: left;
+      height: 90px;
+      width: 90px;
+      text-align: center;
+      font-size: 45px;
+      line-height: 90px;
+    }
+    .info-box-content {
+      padding: 5px 10px;
+      margin-left: 90px;
+      text-align: center;
+      color: $l-text;
+      font-size: 2.5rem !important;
+    }
+    .info-box-number {
+      display: block;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .info-box-text {
+      display: block;
+      font-size: 14px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .info-box-more {
+      display: block;
+    }
+
+    .progress-description {
+      margin: 0;
+    }
+  }
+}
+
+.bg-blue {
+  background: $blue;
+}
+
+.bg-red {
+  background: $red;
+}
+
+.bg-yellow {
+  background: $yellow
+}
+
+.bg-green {
+  background: $green;
 }
