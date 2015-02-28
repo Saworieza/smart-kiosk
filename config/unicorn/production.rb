@@ -4,7 +4,7 @@ pid "#{root}/tmp/pids/unicorn.pid"
 stderr_path "#{root}/log/unicorn.err.log"
 stdout_path "#{root}/log/unicorn.out.log"
 
-listen "/tmp/unicorn.zinnly.sock"
+listen "/tmp/unicorn.smart_kiosk.sock"
 worker_processes 4
 timeout 30
 
