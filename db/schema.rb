@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150228074008) do
+ActiveRecord::Schema.define(version: 20150228190032) do
 
   create_table "devices", force: :cascade do |t|
     t.integer  "user_id"
@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 20150228074008) do
     t.datetime "confirmation_sent_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "avatar"
   end
 
   add_index "vendors", ["confirmation_token"], name: "index_vendors_on_confirmation_token", unique: true

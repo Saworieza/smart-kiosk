@@ -4,7 +4,7 @@ body {
 }
 
 .navbar-brand {
-  font-weight: bold;
+  font-family: 'Lato', sans-serif;
 }
 
 .navbar {
@@ -131,4 +131,105 @@ body {
 
 .bg-green {
   background: $green;
+}
+
+.alert-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-left: 35%;
+  margin-top: 25px;
+  width: 30%;
+  z-index: 10000;
+  text-align: center;
+}
+
+.alert {
+  padding: 10px 25px;
+}
+
+button.close {
+  font-weight: lighter;
+  opacity: 1;
+  margin: 5px;
+  font-size: 1.65rem;
+}
+
+.alert-danger {
+  background: #fff;
+  border-color: #f43c43;
+}
+
+.alert-info {
+  background: #fff;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  color: $white;
+  font-size: 4rem;
+  text-align: center;
+  border: 2px solid $border;
+  border-radius: 10rem;
+  background: $l-sidebar;
+}
+
+.vendor-info {
+  color: $white;
+  padding: 20px 0px;
+  text-align: center;
+  .avatar {
+    margin-left: 35%;
+  }
+  .actions {
+    margin-top: 30px;
+    text-align: left;
+    list-style: none;
+    padding-left: 0;
+    li {
+     padding-top: 10px;
+     padding-bottom: 10px;
+     a {
+      display: block;
+      margin-left: 10px;
+      text-decoration: none;
+      color: $white;
+      i {
+        font-size: 2rem;
+        margin-right: 10px;
+      }
+     }
+     &:hover {
+      cursor: pointer;
+      background: $d-sidebar;
+     };
+    }
+    li.active {
+      border-left: 3px solid #3c8dbc;
+      background: $d-sidebar;
+    }
+  }
+}
+
+.top-users {
+  border: 1px solid $border;
+  padding: 0px;
+  h5 {
+    margin-top: 0;
+    display: block;
+    background: #f4f4f4;
+    padding: 20px 10px;
+  }
+  ul {
+    padding-left: 0px;
+    list-style: none;
+    max-height: 325px;
+    overflow-y: auto;
+    li {
+      padding: 10px;
+      border-bottom: 1px solid $border;
+    }
+  }
 }
