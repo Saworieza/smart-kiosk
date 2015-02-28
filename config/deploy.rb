@@ -2,7 +2,7 @@
 lock '3.3.5'
 
 set :application, 'smark-kiosk'
-set :repo_url, 'git@github.com:sudharti/smark-kiosk.git'
+set :repo_url, 'git@github.com:sudharti/smart-kiosk.git'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
