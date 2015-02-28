@@ -1,0 +1,19 @@
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: zinnly_production
+  username: ubuntu
+  password: teamzinnly
+  host: localhost
+  pool: 50
+  timeout: 100000
+
+staging:
+  adapter: postgresql
+  encoding: unicode
+  database: zinnly_staging
+  username: ubuntu
+  password: teamzinnly
+  host: localhost
+  pool: 50
+  timeout: 100000
