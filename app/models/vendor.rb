@@ -6,4 +6,7 @@ class Vendor < ActiveRecord::Base
 
   validates :name, presence: true, length: { maximum: 100 }
   mount_uploader :avatar, AvatarUploader
+
+  has_many :stores
+
 end
