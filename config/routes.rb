@@ -1,10 +1,18 @@
 Rails.application.routes.draw do
 
+  namespace :api, defaults: { format: :json} do
+    namespace :v1 do
+      resources :users, only: [:create, :show]
+      resources :devices, only: [:create, :show]
+    end
+  end
+
   devise_for :vendors
 
   authenticated :vendor do
     root to: "vendors#index", as: "vendor_home"
   end
+
   unauthenticated :vendor do
     root 'static_pages#index'
   end
