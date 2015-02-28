@@ -1,4 +1,4 @@
-root = "/root/shopping-kiosk/current"
+root = "/var/www/shopping-kiosk/current"
 working_directory root
 pid "#{root}/tmp/pids/unicorn.pid"
 stderr_path "#{root}/log/unicorn.err.log"
