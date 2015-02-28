@@ -9,10 +9,10 @@ set :rails_env, :production
 
 server '104.236.76.82', user: 'root', roles: %w{web app db}, my_property: :my_value
 
-#set :sidekiq_default_hooks, true
-#set :sidekiq_pid, File.join(shared_path, 'tmp', 'pids', 'sidekiq.pid')
-#set :sidekiq_env, fetch(:rack_env, fetch(:rails_env, fetch(:stage)))
-#set :sidekiq_log, File.join(shared_path, 'log', 'sidekiq.log')
+set :sidekiq_default_hooks, true
+set :sidekiq_pid, File.join(shared_path, 'tmp', 'pids', 'sidekiq.pid')
+set :sidekiq_env, fetch(:rack_env, fetch(:rails_env, fetch(:stage)))
+set :sidekiq_log, File.join(shared_path, 'log', 'sidekiq.log')
 
 # Custom SSH Options
 # ==================
