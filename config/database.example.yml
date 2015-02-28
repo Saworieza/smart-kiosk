@@ -1,9 +1,9 @@
 production:
   adapter: postgresql
   encoding: unicode
-  database: zinnly_production
-  username: ubuntu
-  password: teamzinnly
+  database: smark-kiosk-production
+  username: smart-kiosk-admin
+  password: SmartKiosk
   host: localhost
   pool: 50
   timeout: 100000
@@ -11,9 +11,9 @@ production:
 staging:
   adapter: postgresql
   encoding: unicode
-  database: zinnly_staging
-  username: ubuntu
-  password: teamzinnly
+  database: smark-kiosk-staging
+  username: smart-kiosk-admin
+  password: SmartKiosk
   host: localhost
   pool: 50
   timeout: 100000
