@@ -4,9 +4,14 @@
     <h5><b><%= current_vendor.name %></b></h5>
     <h6><%= current_vendor.email %></h6>
     <ul class="actions">
-      <li class="active"><a href="#"><i class="ion-ios-speedometer"></i> Dashboard</a></li>
+      <li class="<%= (action == 'dashboard') ? 'active': ''%>">
+        <%= link_to "<i class='ion-ios-speedometer'></i> Dashboard".html_safe, root_path %>
+      </li>
       <li><a href="#"><i class="ion-ios-pie"></i> Analytics</a></li>
-      <li><a href="#"><i class="ion-ios-monitor"></i> Manage Stores</a></li>
+      <li class="<%= (action == 'stores') ? 'active': ''%>">
+        <%= link_to "<i class='ion-bag'></i> Manage Stores".html_safe, stores_path %>
+      </li>
+      <li><a href="#"><i class="ion-ios-monitor"></i> Manage Kiosks</a></li>
       <li><a href="#"><i class="ion-ios-albums"></i> Manage Items</a></li>
       <li><a href="#"><i class="ion-ios-people"></i> Manage Users</a></li>
     </ul>
