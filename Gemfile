@@ -63,6 +63,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'active_model_serializers'
 gem 'sidekiq'
 gem 'rack-cors', :require => 'rack/cors'
+gem 'gcm'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -71,4 +72,3 @@ gem 'rack-cors', :require => 'rack/cors'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
