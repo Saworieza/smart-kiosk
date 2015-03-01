@@ -1,0 +1,9 @@
+<tr>
+  <td><%= render 'partials/avatar', user: item %></td>
+  <td><%= item.name %></td>
+  <td><%= item.price %></td>
+  <td><%= item.description || 'No Desciption' %></td>
+  <td><%= item.number_of_items %></td>
+  <td><%= link_to 'Edit', edit_item_path(item) %></td>
+  <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>

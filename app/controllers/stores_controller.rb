@@ -28,9 +28,11 @@ class StoresController < ApplicationController
 
     respond_to do |format|
       if @store.save
-        format.html { redirect_to @store, notice: 'Store was successfully created.' }
+        format.html { redirect_to stores_path, notice: 'store was successfully created.' }
+        format.js
       else
         format.html { render action: 'new' }
+        format.js
       end
     end
   end
@@ -38,7 +40,7 @@ class StoresController < ApplicationController
   def update
     respond_to do |format|
       if @store.update(store_params)
-        format.html { redirect_to @store, notice: 'Store was successfully updated.' }
+        format.html { redirect_to stores_path, notice: 'store was successfully updated.' }
       else
         format.html { render action: 'edit' }
       end
