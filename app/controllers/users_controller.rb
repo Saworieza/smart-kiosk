@@ -18,7 +18,7 @@ class UsersController < ApplicationController
 
   def send_coupon
     device = User.find(params[:user_id]).device
-    PushNotificationsWorker.perform_async([device.token], "Hello World")
+    PushNotificationsWorker.perform_async([device.token], "Lucky You! Enjoy 20% discount in our store.")
     respond_to do |format|
       format.js
     end
