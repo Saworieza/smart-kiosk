@@ -11,10 +11,10 @@
               <div class="thumbnail">
                 <%= render 'partials/square_avatar', user: user %>
                 <div class="caption">
-                  <h4><%= user.name %></h4>
+                  <h5><%= user.name %></h5>
                   <p><%= user.email %></p>
-                  <%= link_to "Send Coupon", user_send_coupon_path(user.id), method: :post, remote: true %>
                 </div>
+                <%= link_to "Send Coupon", user_send_coupon_path(user.id), class: 'btn btn-success btn-block', method: :post, remote: true %>
               </div>
             </div>
           <% end %>

@@ -302,3 +302,21 @@ button.close {
   border: 1px solid $border;
   padding: 20px;
 }
+
+#users .thumbnail {
+  height: 300px;
+  .caption {
+    height: 100px;
+    p {
+      font-size: 1.25rem;
+      word-wrap: break-word !important;
+    }
+  }
+}
+
+#items .thumbnail {
+  height: 325px;
+  .caption {
+    font-size: 3.5rem;
+  }
+}

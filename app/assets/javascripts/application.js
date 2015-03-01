@@ -16,7 +16,7 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
-/*$(document).ready(function(){
+$(document).ready(function(){
   socket = io.connect("http://localhost:5001");
   socket.on("client-channel-"+$("#kiosk").data("kiosk"), function(message){
     if(message.status.toString() === "success") {
@@ -25,4 +25,4 @@
       window.location.href = '/';
     }
   });
-});*/
+});

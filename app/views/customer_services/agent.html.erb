@@ -1,0 +1,13 @@
+<h1>Agent Dashboard</h1>
+<p>Status: Customer has requested a callback.</p>
+<table>
+  <tr>
+    <th>Name</th>
+    <td><%= @customer.first_name %> <%= @customer.last_name %></td>
+  </tr>
+  <tr>
+    <th>Location</th>
+    <td><%= @customer.city %>, <%= @customer.state %></td>
+  </tr>
+</table>
+<button onClick="call()">Make Call</button>

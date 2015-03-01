@@ -4,6 +4,16 @@
     <title>SmartKiosk</title>
     <%= stylesheet_link_tag    'application', media: 'all'%>
     <%= javascript_include_tag 'application' %>
+    <script type="text/javascript" src="//static.twilio.com/libs/twiliojs/1.2/twilio.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function(event) {
+        Twilio.Device.setup("<%= @token %>");
+      });
+      
+      function call() {
+        Twilio.Device.connect({id: 123});
+      }
+    </script>
     <%= csrf_meta_tags %>
   </head>
   <body>
