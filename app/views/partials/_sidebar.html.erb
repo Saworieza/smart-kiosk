@@ -7,7 +7,9 @@
       <li class="<%= (action == 'dashboard') ? 'active' : ''%>">
         <%= link_to "<i class='ion-ios-speedometer'></i> Dashboard".html_safe, root_path %>
       </li>
-      <li><a href="#"><i class="ion-ios-pie"></i> Analytics</a></li>
+      <li class="<%= (action == 'analytics') ? 'active' : ''%>">
+        <%= link_to "<i class='ion-ios-pie'></i> Analytics".html_safe, analytics_path %>
+      </li>
       <li class="<%= (action == 'stores') ? 'active' : ''%>">
         <%= link_to "<i class='ion-bag'></i> Manage Stores".html_safe, stores_path %>
       </li>

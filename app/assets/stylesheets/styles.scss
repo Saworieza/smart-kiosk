@@ -102,6 +102,7 @@ body {
     }
     .info-box-text {
       display: block;
+      margin-top: 15px;
       font-size: 14px;
       white-space: nowrap;
       overflow: hidden;
@@ -196,6 +197,9 @@ button.close {
   color: $white;
   padding: 20px 0px;
   text-align: center;
+  div.avatar {
+    margin-left: 35%;
+  }
   .actions {
     margin-top: 30px;
     text-align: left;

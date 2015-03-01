@@ -9,25 +9,29 @@
           New Store
       </button><br>
         <br>
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th>Address</th>
-              <th>Vendor</th>
-              <th colspan="2"></th>
-            </tr>
-          </thead>
-          <tbody>
-            <% @stores.each do |store| %>
+        <% if @stores.empty? %>
+          <h5 class="no-text">You have not added any Stores yet! Go ahead and click the button above to add.</h5>
+        <% else %>
+          <table class="table table-striped">
+            <thead>
               <tr>
-                <td><%= store.address %></td>
-                <td><%= store.vendor.name %></td>
-                <td><%= link_to 'Edit', edit_store_path(store) %></td>
-                <td><%= link_to 'Destroy', store, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <th>Address</th>
+                <th>Vendor</th>
+                <th colspan="2"></th>
               </tr>
-            <% end %>
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              <% @stores.each do |store| %>
+                <tr>
+                  <td><%= store.address %></td>
+                  <td><%= store.vendor.name %></td>
+                  <td><%= link_to 'Edit', edit_store_path(store) %></td>
+                  <td><%= link_to 'Destroy', store, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        <% end %>
       </div>
       <br>
       <div class="modal fade" id="newStoreModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

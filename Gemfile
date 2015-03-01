@@ -72,6 +72,7 @@ gem 'redis'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'mailjet'
+gem 'chartkick'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

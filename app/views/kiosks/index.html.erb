@@ -9,29 +9,33 @@
           New Kiosk
         </button><br>
         <br>
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th>Unique Id</th>
-              <th>Beacon UUID</th>
-              <th>Store Id</th>
-              <th>Vendor Name</th>
-              <th colspan="1"></th>
-            </tr>
-          </thead>
-          <tbody id="kiosks">
-            <% @kiosks.each do |kiosk| %>
+        <% if @kiosks.empty? %>
+          <h5 class="no-text">You have not added any Kiosks yet! Go ahead and click the button above to add.</h5>
+        <% else %>
+          <table class="table table-striped">
+            <thead>
               <tr>
-                <td><%= kiosk.unique_id %></td>
-                <td><%= kiosk.beacon_uuid %></td>
-                <td><%= kiosk.store.id %></td>
-                <td><%= kiosk.vendor.name %></td>
-                <td><%= link_to 'Edit', edit_item_path(kiosk) %></td>
-                <td><%= link_to 'Destroy', kiosk, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <th>Unique Id</th>
+                <th>Beacon UUID</th>
+                <th>Store Id</th>
+                <th>Vendor Name</th>
+                <th colspan="1"></th>
               </tr>
-            <% end %>
-          </tbody>
-        </table>
+            </thead>
+            <tbody id="kiosks">
+              <% @kiosks.each do |kiosk| %>
+                <tr>
+                  <td><%= kiosk.unique_id %></td>
+                  <td><%= kiosk.beacon_uuid %></td>
+                  <td><%= kiosk.store.id %></td>
+                  <td><%= kiosk.vendor.name %></td>
+                  <td><%= link_to 'Edit', edit_item_path(kiosk) %></td>
+                  <td><%= link_to 'Destroy', kiosk, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        <% end %>
       </div>
       <br>
       <!-- Modal -->

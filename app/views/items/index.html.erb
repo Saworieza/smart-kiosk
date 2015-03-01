@@ -2,37 +2,43 @@
   <div class="row">
     <%= render 'partials/sidebar', action: 'items' %>
     <div class="col-lg-10 col-md-7 col-sm-12 col-xs-12 right-relative">
-      <h3>Listing Items</h3>
-      <br>
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newItemModal">
-        New Item
+      <div class="col-lg-10 col-lg-offset-1">
+        <h3>Listing Items</h3>
+        <br>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newItemModal">
+          New Item
       </button><br>
-      <br>
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th>Avatar</th>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Desciption</th>
-            <th>Number of Items</th>
-            <th colspan="2"></th>
-          </tr>
-        </thead>
-        <tbody id="items">
-          <% @items.each do |item| %>
-            <tr>
-              <td><%= render 'partials/avatar', user: item %></td>
-              <td><%= item.name %></td>
-              <td><%= item.price %></td>
-              <td><%= item.description || 'No Desciption' %></td>
-              <td><%= item.number_of_items %></td>
-              <td><%= link_to 'Edit', edit_item_path(item) %></td>
-              <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
+        <br>
+        <% if @items.empty? %>
+          <h5 class="no-text">You have not added any Items yet! Go ahead and click the button above to add.</h5>
+        <% else %>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Avatar</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Desciption</th>
+                <th>Number of Items</th>
+                <th colspan="2"></th>
+              </tr>
+            </thead>
+            <tbody id="items">
+              <% @items.each do |item| %>
+                <tr>
+                  <td><%= render 'partials/avatar', user: item %></td>
+                  <td><%= item.name %></td>
+                  <td><%= item.price %></td>
+                  <td><%= item.description? || 'No Desciption' %></td>
+                  <td><%= item.number_of_items %></td>
+                  <td><%= link_to 'Edit', edit_item_path(item) %></td>
+                  <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        <% end %>
+      </div>
       <br>
       <!-- Modal -->
       <div class="modal fade" id="newItemModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
