@@ -21,12 +21,12 @@ namespace :populate do
       item.name = Faker::Company.name
       item.number_of_items = 100..2000
       item.price = 10..30000
-      item.vendor_id = 3
+      item.vendor_id = Vendor.first
     end
 
     Store.populate 10 do |store|
       store.address = Faker::Address.street_address + Faker::Address.secondary_address
-      store.vendor_id = 3
+      store.vendor_id = Vendor.first
     end
   end
 end
