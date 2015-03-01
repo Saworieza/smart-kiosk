@@ -11,3 +11,15 @@
   </tr>
 </table>
 <button onClick="call()">Make Call</button>
+<script type="text/javascript"
+src="//static.twilio.com/libs/twiliojs/1.2/twilio.min.js"></script>
+<script>
+  // works on IE9 and above
+  document.addEventListener("DOMContentLoaded", function(event) {
+    Twilio.Device.setup("<%= @token %>");
+  });
+  function call() {
+    console.log("foo");
+    Twilio.Device.connect({id: 123});
+  }
+</script>
