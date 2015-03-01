@@ -4,10 +4,6 @@ namespace :populate do
     require 'populator'
     require 'faker'
 
-    populator_models = [User, Item,Store]
-    populator_models.each(&:delete_all)
-    populator_models.each(&:reset_column_information)
-
     User.populate 50 do |user|
       user.name = Faker::Name.name
       user.email = Faker::Internet.email
@@ -27,6 +23,8 @@ namespace :populate do
     Store.populate 10 do |store|
       store.address = Faker::Address.street_address + Faker::Address.secondary_address
       store.vendor_id = Vendor.first
+      store.revenue = 100..20000
+      store.cost = 100..1000
     end
   end
 end
