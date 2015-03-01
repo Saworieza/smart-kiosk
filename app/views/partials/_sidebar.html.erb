@@ -11,7 +11,9 @@
       <li class="<%= (action == 'stores') ? 'active': ''%>">
         <%= link_to "<i class='ion-bag'></i> Manage Stores".html_safe, stores_path %>
       </li>
-      <li><a href="#"><i class="ion-ios-monitor"></i> Manage Kiosks</a></li>
+      <li class="<%= (action == 'kiosks') ? 'active': ''%>">
+        <%= link_to "<i class='ion-ios-monitor'></i> Manage Kiosks".html_safe, kiosks_path %>
+      </li>
       <li><a href="#"><i class="ion-ios-albums"></i> Manage Items</a></li>
       <li><a href="#"><i class="ion-ios-people"></i> Manage Users</a></li>
     </ul>

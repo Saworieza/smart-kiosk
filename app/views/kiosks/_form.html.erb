@@ -1,0 +1,21 @@
+<%= form_tag kiosks_path, remote:true do %>
+  <div class="form-group">
+    <%= label_tag :unique_id %><br>
+    <%= text_field_tag 'kiosk[unique_id]', nil, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= label_tag :beacon_uuid %><br>
+    <%= text_field_tag 'kiosk[beacon_uuid]', nil, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= label_tag :password %><br>
+    <%= password_field_tag 'kiosk[password]', nil, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= label_tag :store_id %><br>
+    <%= select_tag 'kiosk[store_id]', options_for_select(fetch_stores), class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= submit_tag :create, class: 'btn btn-primary' %>
+  </div>
+<% end %>

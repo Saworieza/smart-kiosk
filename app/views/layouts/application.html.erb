@@ -20,6 +20,9 @@
         <%= alert %>
       </div>
     <% end %>
+    <div id="messages">
+      <%= render 'partials/global_messages', message: nil %>
+    </div>
     <%= yield %>
   </body>
 </html>

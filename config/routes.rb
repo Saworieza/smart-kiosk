@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  devise_for :kiosks
   resources :stores
+  resources :kiosks
 
   namespace :api, defaults: { format: :json} do
     namespace :v1 do

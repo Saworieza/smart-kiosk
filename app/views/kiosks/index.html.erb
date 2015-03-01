@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="row">
+    <%= render 'partials/sidebar', action: 'kiosks' %>
+    <div class="col-lg-10 col-md-7 col-sm-12 col-xs-12 right-relative">
+      <div class="col-lg-10 col-lg-offset-1">
+        <!-- Button trigger modal -->
+        <h3>Listing Kiosks</h3>
+        <br>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+          New Kiosk
+        </button><br>
+        <br>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Unique Id</th>
+              <th>Beacon UUID</th>
+              <th>Store Id</th>
+              <th>Vendor Name</th>
+              <th colspan="1"></th>
+            </tr>
+          </thead>
+          <tbody id="kiosks">
+            <% @kiosks.each do |kiosk| %>
+              <tr>
+                <td><%= kiosk.unique_id %></td>
+                <td><%= kiosk.beacon_uuid %></td>
+                <td><%= kiosk.store.id %></td>
+                <td><%= kiosk.vendor.name %></td>
+                <td><%= link_to 'Destroy', kiosk, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+      <br>
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Create New Kiosk</h4>
+            </div>
+            <div class="modal-body">
+              <%= render 'form' %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

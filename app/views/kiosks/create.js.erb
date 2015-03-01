@@ -1,0 +1,7 @@
+<% if @kiosk.persisted? %>
+  $('#myModal').modal('hide');
+  $('#messages').html("<%=j render 'partials/global_messages', message: 'Kiosk was created successfully' %>");
+  $("#kiosks").append("<%=j render 'partials/kiosk', kiosk: @kiosk %>");
+<% else %>
+  $('#messages').html("<%=j render 'partials/global_messages', message: @kiosk.errors.full_messages.first %>");
+<% end %>

@@ -29,8 +29,10 @@ class KiosksController < ApplicationController
     respond_to do |format|
       if @kiosk.save
         format.html { redirect_to @kiosk, notice: 'kiosk was successfully created.' }
+        format.js
       else
         format.html { render action: 'new' }
+        format.js
       end
     end
   end
@@ -58,6 +60,6 @@ class KiosksController < ApplicationController
   end
 
   def kiosk_params
-    params.require(:kiosk).permit(:unique_id, :password, :password_confirmation, :beacon_uuid, :store_id)
+    params.require(:kiosk).permit(:unique_id, :password, :beacon_uuid, :store_id)
   end
 end
