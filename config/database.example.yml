@@ -1,9 +1,9 @@
 production:
   adapter: postgresql
   encoding: unicode
-  database: sm_prod
-  username: smadmin
-  password: $martKiosk15
+  database: smart-kiosk-production
+  username: smart-kiosk-admin
+  password: SmartKiosk
   host: localhost
   pool: 50
   timeout: 100000
@@ -11,9 +11,9 @@ production:
 staging:
   adapter: postgresql
   encoding: unicode
-  database: sm_prod
-  username: smadmin
-  password: $martKiosk15
+  database: smart-kiosk-staging
+  username: smart-kiosk-admin
+  password: SmartKiosk
   host: localhost
   pool: 50
   timeout: 100000

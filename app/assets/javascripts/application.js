@@ -17,7 +17,7 @@
 //= require_tree .
 
 $(document).ready(function(){
-  socket = io.connect("http://168.61.217.44:5001");
+  socket = io.connect("http://104.236.76.82:5001");
   socket.on("client-channel-"+$("#kiosk").data("kiosk"), function(message){
     if(message.status.toString() === "success") {
       window.location.href = '/static_pages/kiosk_user_profile?id=' + message.user.id;

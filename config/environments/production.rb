@@ -74,7 +74,7 @@ Rails.application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
-  config.action_mailer.default_url_options = { :host => "http://smartkiosk.cloudapp.net" }
+  config.action_mailer.default_url_options = { :host => "104.236.76.82" }
 
   ActionMailer::Base.delivery_method = :mailjet
   ActionMailer::Base.perform_deliveries = true
