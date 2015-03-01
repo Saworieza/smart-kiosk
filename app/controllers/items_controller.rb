@@ -1,5 +1,8 @@
 class ItemsController < ApplicationController
+
+  before_action :authenticate_vendor!
   before_action :set_item, only: [:show, :edit, :update, :destroy]
+
   def index
     @items = current_vendor.items.all
     respond_to do |format|

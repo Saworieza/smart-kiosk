@@ -1,4 +1,6 @@
 class StoresController < ApplicationController
+
+  before_action :authenticate_vendor!
   before_action :set_store, only: [:show, :edit, :update, :destroy]
 
   def index

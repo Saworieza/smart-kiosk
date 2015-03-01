@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :stores
   resources :kiosks
   resources :items
+  resources :analytics, only: [:index]
   resources :users, only: [:index, :show] do
     post 'send_coupon'
   end

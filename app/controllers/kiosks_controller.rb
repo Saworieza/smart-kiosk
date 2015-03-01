@@ -1,4 +1,6 @@
 class KiosksController < ApplicationController
+
+  before_action :authenticate_vendor!
   before_action :set_kiosk, only: [:show, :edit, :update, :destroy]
 
   def index

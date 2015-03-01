@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
+
+  before_action :authenticate_vendor!
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+
   def index
     @users = User.all
     respond_to do |format|
