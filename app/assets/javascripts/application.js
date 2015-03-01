@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require socket.io
-//= require heatmap
 //= require bootstrap-sprockets
 //= require_tree .
 
