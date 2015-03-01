@@ -13,6 +13,8 @@
       <ul class="nav navbar-nav navbar-right">
         <% if vendor_signed_in? %>
           <li><%= link_to('Sign out', destroy_vendor_session_path, method: :delete) %></li>
+        <% elsif kiosk_signed_in? %>
+          <li><%= link_to('Sign out of Kiosk', destroy_kiosk_session_path, method: :delete) %></li>
         <% else %>
           <li><%= link_to 'Kiosk Login', new_kiosk_session_path %></li>
           <li><%= link_to 'Vendor Login', new_vendor_session_path %></li>

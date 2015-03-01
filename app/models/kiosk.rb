@@ -13,6 +13,7 @@ class Kiosk < ActiveRecord::Base
 
   def self.authenticate_kiosk(unique_id, password)
     kiosk = find_by_unique_id(unique_id)
+    puts kiosk
     return kiosk if kiosk && kiosk.authenticate(password)
   end
 

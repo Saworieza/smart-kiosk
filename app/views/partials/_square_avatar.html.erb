@@ -1,0 +1,7 @@
+<% if !user.avatar.nil? %>
+  <div class="square-avatar">
+    <span><%= user.name[0,1] %></span>
+  </div>
+<% else %>
+  <%= image_tag user.avatar, class: 'square-avatar' %>
+<% end %>

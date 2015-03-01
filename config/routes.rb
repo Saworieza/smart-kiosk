@@ -7,12 +7,14 @@ Rails.application.routes.draw do
     post 'send_coupon'
   end
 
-  resources :kiosk_sessions, only: [:new, :create, :destroy]
+  resources :kiosk_sessions, only: [:new, :create]
+  delete 'kiosk_sessions/sign_out', as: :destroy_kiosk_session
 
   namespace :api, defaults: { format: :json} do
     namespace :v1 do
       resources :users, only: [:create, :show]
       resources :devices, only: [:create, :show]
+      resources :kiosks, only: [:create, :destroy]
     end
   end
 
@@ -27,6 +29,8 @@ Rails.application.routes.draw do
   end
 
   get 'static_pages/test_gcm'
+  get 'static_pages/kiosk', as: :kiosk_landing
+  get 'static_pages/kiosk_user_profile', as: :kiosk_profile
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

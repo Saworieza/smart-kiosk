@@ -12,6 +12,18 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require heatmap
+//= require socket.io
 //= require bootstrap-sprockets
 //= require_tree .
+
+$(document).ready(function(){
+  socket = io.connect("http://localhost:5001");
+  console.log("client-channel-"+$("#kiosk").data("kiosk"));
+  socket.on("client-channel-"+$("#kiosk").data("kiosk"), function(message){
+    if(message.status.toString() === "success") {
+      window.location.href = '/static_pages/kiosk_user_profile?id=' + message.user.id;
+    } else {
+      window.location.href = '/';
+    }
+  });
+});

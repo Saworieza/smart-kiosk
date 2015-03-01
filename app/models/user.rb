@@ -19,4 +19,15 @@ class User < ActiveRecord::Base
     avatar.url
   end
 
+  def notify_kiosk(kiosk)
+    msg = {
+      resource: 'kiosk',
+      user: self,
+      kiosk: kiosk,
+      status: 'success'
+    }
+
+    $redis.publish "rt-change", msg.to_json
+  end
+
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150301025824) do
+ActiveRecord::Schema.define(version: 20150301061539) do
 
   create_table "devices", force: :cascade do |t|
     t.integer  "user_id"
@@ -38,13 +38,13 @@ ActiveRecord::Schema.define(version: 20150301025824) do
   add_index "items", ["vendor_id"], name: "index_items_on_vendor_id"
 
   create_table "kiosks", force: :cascade do |t|
-    t.string   "unique_id",   null: false
-    t.string   "password",    null: false
-    t.string   "beacon_uuid", null: false
+    t.string   "unique_id",       null: false
+    t.string   "beacon_uuid",     null: false
     t.integer  "store_id"
     t.integer  "vendor_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.text     "password_digest"
   end
 
   add_index "kiosks", ["store_id"], name: "index_kiosks_on_store_id"
