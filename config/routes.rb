@@ -33,8 +33,7 @@ Rails.application.routes.draw do
   get 'static_pages/test_gcm'
   get 'static_pages/kiosk', as: :kiosk_landing
   get 'static_pages/kiosk_user_profile', as: :kiosk_profile
-  get 'customer_services/agent' => 'customer_services#agent'
-  post 'twilio/connect_customer' => 'twilio#connect_customer'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

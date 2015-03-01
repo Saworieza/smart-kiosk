@@ -73,7 +73,6 @@ gem 'redis'
 gem 'bcrypt', '~> 3.1.7'
 gem 'mailjet'
 gem 'chartkick'
-gem 'twilio-ruby', '~> 3.12'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
