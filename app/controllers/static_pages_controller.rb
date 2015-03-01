@@ -12,7 +12,7 @@ class StaticPagesController < ApplicationController
 
   def kiosk_user_profile
     @user = User.find(params[:id])
-    @items = Item.all
+    @items = Item.all.order("created_at DESC")
   end
 
   def test_gcm
