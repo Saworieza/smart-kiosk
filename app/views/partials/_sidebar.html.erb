@@ -17,7 +17,9 @@
       <li class="<%= (action == 'items') ? 'active' : ''%>">
         <%= link_to "<i class='ion-ios-albums'></i> Manage Items".html_safe, items_path %>
       </li>
-      <li><a href="#"><i class="ion-ios-people"></i> Manage Users</a></li>
+      <li class="<%= (action == 'users') ? 'active' : ''%>">
+        <%= link_to "<i class='ion-ios-people'></i> Manage Users".html_safe, users_path %>
+      </li>
     </ul>
   </div>
 </div>

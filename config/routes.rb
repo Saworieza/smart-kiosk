@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   resources :stores
   resources :kiosks
   resources :items
-  resources :users
+  resources :users, only: [:index, :show] do
+    post 'send_coupon'
+  end
+
+  resources :kiosk_sessions, only: [:new, :create, :destroy]
 
   namespace :api, defaults: { format: :json} do
     namespace :v1 do

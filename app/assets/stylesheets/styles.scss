@@ -243,3 +243,15 @@ button.close {
 .btn {
   border-radius: 2px;
 }
+
+#heatmapContainerWrapper {
+  width: 100%;
+  height: 400px;
+  
+}
+
+#heatmapContainer {
+  width: 100%;
+  height: 400px;
+  background-image: image-url("storeLayout.jpg");
+}
