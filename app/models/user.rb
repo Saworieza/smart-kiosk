@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
   validates_presence_of :level
   mount_uploader :avatar, AvatarUploader
 
+  has_one :device
+
   enum level: {
     first_time: 0,
     occassional: 1,

@@ -17,8 +17,11 @@ class UsersController < ApplicationController
   end
 
   def send_coupon
-    device = User.find(params[:user_id])
+    device = User.find(params[:user_id]).device
     PushNotificationsWorker.perform_async(device.token, "Hello World")
+    respond_to do |format|
+      format.js
+    end
   end
 
   private
