@@ -15,6 +15,7 @@ Rails.application.routes.draw do
       resources :users, only: [:create, :show]
       resources :devices, only: [:create, :show]
       resources :kiosks, only: [:create, :destroy]
+      resources :items, only: [:index]
     end
   end
 

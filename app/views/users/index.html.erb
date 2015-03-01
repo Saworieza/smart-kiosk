@@ -2,6 +2,23 @@
   <div class="row">
     <%= render 'partials/sidebar', action: 'users' %>
     <div class="col-lg-10 col-md-7 col-sm-12 col-xs-12 right-relative">
+      <div class="col-lg-10 col-lg-offset-1">
+        <h3>Listing Users</h3>
+        <br>
+        <div id="users" class="row">
+          <% @users.each do |user| %>
+            <div class="col-sm-6 col-md-3 col-lg-3">
+              <div class="thumbnail">
+                <%= render 'partials/square_avatar', user: user %>
+                <div class="caption">
+                  <h4><%= user.name %></h4>
+                  <p><%= user.email %></p>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
 </div>

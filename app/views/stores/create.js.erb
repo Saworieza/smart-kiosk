@@ -1,7 +1,7 @@
 <% if @store.persisted? %>
   $('#newStoreModal').modal('hide');
   $('#messages').html("<%=j render 'partials/global_messages', message: 'store was created successfully' %>");
-  $("#stores").append("<%=j render 'partials/store', kiosk: @store %>");
+  $("#stores").append("<%=j render 'partials/store', store: @store %>");
 <% else %>
   $('#messages').html("<%=j render 'partials/global_messages', message: @store.errors.full_messages.first %>");
 <% end %>

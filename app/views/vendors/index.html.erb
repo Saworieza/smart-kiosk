@@ -16,7 +16,7 @@
                 <i class="ion ion-cash"></i>
               </span>
               <div class="info-box-content">
-                <span class="info-box-text">Sales</span>
+                <span class="info-box-text">PROFIT</span>
                 <span class="info-box-number">760</span>
               </div>
             </div>
@@ -27,7 +27,7 @@
                 <i class="ion ion-ios-cart-outline"></i>
               </span>
               <div class="info-box-content">
-                <span class="info-box-text">Sales</span>
+                <span class="info-box-text">SALES</span>
                 <span class="info-box-number">760</span>
               </div>
             </div>
@@ -38,7 +38,7 @@
                 <i class="ion ion-podium"></i>
               </span>
               <div class="info-box-content">
-                <span class="info-box-text">Sales</span>
+                <span class="info-box-text">GROWTH</span>
                 <span class="info-box-number">760</span>
               </div>
             </div>
@@ -49,8 +49,8 @@
                 <i class="ion ion-ios-people-outline"></i>
               </span>
               <div class="info-box-content">
-                <span class="info-box-text">Sales</span>
-                <span class="info-box-number">760</span>
+                <span class="info-box-text">MEMBERS</span>
+                <span class="info-box-number"><%= @users.count %></span>
               </div>
             </div>
           </div>
@@ -66,18 +66,21 @@
           </div>
           <div class="col-lg-4">
             <div class="top-users">
-              <h5><b>TOP USERS</b></h5>
+              <h5><b>CUSTOMER RANKING</b></h5>
               <ul>
-                <li>Bruce</li>
-                <li>Bruce</li>
-                <li>Bruce</li>
-                <li>Bruce</li>
-                <li>Bruce</li>
-                <li>Bruce</li>
-                <li>Bruce</li>
-                <li>Bruce</li>
-                <li>Bruce</li>
-                <li>Bruce</li>
+                <% @top_users.each do |user| %>
+                  <li>
+                    <div class="row">
+                      <div class="col-lg-3">
+                        <%= render 'partials/avatar', user: user %>
+                      </div>
+                      <div class="col-lg-9">
+                        <h6><%= user.name %></h6>
+                        <span><%= pluralize(user.points, "point") %></span>
+                      </div>
+                    </div>
+                  </li>
+                <% end %>
               </ul>
             </div>
           </div>

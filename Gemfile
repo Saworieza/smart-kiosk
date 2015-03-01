@@ -31,8 +31,6 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'rspec-rails', '~> 3.0.0.beta'
   gem 'rspec', '~> 3.0.0.beta2'
-  gem 'faker'
-  gem 'populator'
   gem 'capistrano'
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
@@ -50,6 +48,8 @@ group :production do
   gem 'unicorn'
 end
 
+gem 'faker'
+gem 'populator'
 gem 'devise'
 gem 'carrierwave'
 gem 'friendly_id', '~> 5.0.0'

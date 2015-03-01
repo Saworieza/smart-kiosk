@@ -8,4 +8,8 @@ class Item < ActiveRecord::Base
 
   mount_uploader :avatar, AvatarUploader
 
+  def avatar_url
+    avatar.url
+  end
+
 end

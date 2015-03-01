@@ -1,5 +1,5 @@
 body {
-	font-family: 'Noto Sans', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   padding-top: 65px;
 }
 
@@ -196,9 +196,6 @@ button.close {
   color: $white;
   padding: 20px 0px;
   text-align: center;
-  .avatar {
-    margin-left: 35%;
-  }
   .actions {
     margin-top: 30px;
     text-align: left;
@@ -249,9 +246,22 @@ button.close {
     list-style: none;
     max-height: 325px;
     overflow-y: auto;
+    overflow-x: hidden;
     li {
-      padding: 10px;
+      padding: 10px 20px;
       border-bottom: 1px solid $border;
+      .avatar {
+        width: 45px;
+        height: 45px;
+        font-size: 2.75rem;
+      }
+      h6 {
+        font-size: 1.5rem;
+      }
+      span {
+        display: inline-block;
+        font-size: 1.3rem;
+      }
     }
   }
 }
@@ -282,4 +292,9 @@ button.close {
   border: 1px solid $border;
   padding: 20px; 
   margin-top: 30px;
+}
+
+.user-list {
+  border: 1px solid $border;
+  padding: 20px;
 }
