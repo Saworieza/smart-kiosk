@@ -1,4 +1,4 @@
-<% if !user.avatar.nil? %>
+<% if user.avatar.nil? || user.avatar.url.nil? %>
   <div class="large-avatar">
     <%= user.name[0,1] %>
   </div>

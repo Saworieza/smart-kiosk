@@ -7,7 +7,7 @@
 set :stage, :production
 set :rails_env, :production
 
-server '104.236.76.82', user: 'root', roles: %w{web app db}, my_property: :my_value
+server 'smartkiosk.cloudapp.net', user: 'smartkiosk', roles: %w{web app db}, my_property: :my_value
 
 set :sidekiq_default_hooks, true
 set :sidekiq_pid, File.join(shared_path, 'tmp', 'pids', 'sidekiq.pid')
