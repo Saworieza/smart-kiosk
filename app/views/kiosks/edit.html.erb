@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <%= render 'partials/sidebar', action: 'items' %>
+    <div class="col-lg-10 col-md-7 col-sm-12 col-xs-12 right-relative">
+      <h3>Editing Kiosk</h3>
+      <%= form_for @kiosk do |f| %>
+        <div class="form-group">
+          <%= f.label :unique_id %><br>
+          <%= f.text_field :unique_id, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :beacon_uuid %><br>
+          <%= f.text_field :beacon_uuid, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :password %><br>
+          <%= f.password_field :password, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :store %><br>
+          <%= f.select :store_id, options_for_select(fetch_stores), class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.submit :update, class: 'btn btn-primary' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

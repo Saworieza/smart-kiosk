@@ -65,6 +65,9 @@ gem 'sidekiq'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'gcm'
 gem 'ionicons-rails'
+
+gem 'remotipart', '~> 1.2'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

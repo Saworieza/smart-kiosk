@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   resources :stores
   resources :kiosks
+  resources :items
 
   namespace :api, defaults: { format: :json} do
     namespace :v1 do

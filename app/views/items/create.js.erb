@@ -1,0 +1,7 @@
+<% if @item.persisted? %>
+  $('#newItemModal').modal('hide');
+  $('#messages').html("<%=j render 'partials/global_messages', message: 'Item was created successfully' %>");
+  $("#items").append("<%=j render 'partials/item', item: @item %>");
+<% else %>
+  $('#messages').html("<%=j render 'partials/global_messages', message: @item.errors.full_messages.first %>");
+<% end %>

@@ -40,7 +40,7 @@ class KiosksController < ApplicationController
   def update
     respond_to do |format|
       if @kiosk.update(kiosk_params)
-        format.html { redirect_to @kiosk, notice: 'kiosk was successfully updated.' }
+        format.html { redirect_to kiosks_path, notice: 'kiosk was successfully updated.' }
       else
         format.html { render action: 'edit' }
       end

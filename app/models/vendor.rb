@@ -9,5 +9,6 @@ class Vendor < ActiveRecord::Base
 
   has_many :stores
   has_many :kiosks
+  has_many :items
 
 end
