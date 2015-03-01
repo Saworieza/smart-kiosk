@@ -13,6 +13,7 @@
                 <div class="caption">
                   <h4><%= user.name %></h4>
                   <p><%= user.email %></p>
+                  <%= link_to "Send Coupon", user_send_coupon_path(user.id), method: :post %>
                 </div>
               </div>
             </div>
