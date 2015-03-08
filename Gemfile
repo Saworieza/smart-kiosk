@@ -73,6 +73,8 @@ gem 'redis'
 gem 'bcrypt', '~> 3.1.7'
 gem 'mailjet'
 gem 'chartkick'
+gem 'fog'
+gem 'activeadmin', github: 'activeadmin'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
