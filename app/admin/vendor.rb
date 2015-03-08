@@ -14,5 +14,14 @@ ActiveAdmin.register Vendor do
   #   permitted
   # end
 
-
+  form do |f|
+    f.inputs "Vendor Details" do
+      f.input :name
+      f.input :email
+      f.input :password
+      f.input :password_confirmation
+      f.input :avatar
+    end
+    f.actions
+  end
 end

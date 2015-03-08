@@ -14,5 +14,15 @@ ActiveAdmin.register Kiosk do
   #   permitted
   # end
 
+  form do |f|
+    f.inputs "Kiosk Details" do
+      f.input :unique_id
+      f.input :beacon_uuid
+      f.input :store, :collection => Store.all.map{|u| [u.address, u.id]}
+      f.input :vendor
+      f.input :password
+    end
+    f.actions
+  end
 
 end
