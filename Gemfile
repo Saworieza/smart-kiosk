@@ -75,6 +75,7 @@ gem 'mailjet'
 gem 'chartkick'
 gem 'fog'
 gem 'activeadmin', github: 'activeadmin'
+gem 'opentok'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
