@@ -17,7 +17,7 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-rails'
 
 group :development do
-  gem 'spring'
+  #gem 'spring'
   gem 'better_errors'
   gem 'letter_opener'
   gem 'guard'
