@@ -14,5 +14,14 @@ ActiveAdmin.register User do
   #   permitted
   # end
 
+  form do |f|
+    f.inputs "User Details" do
+      f.input :name
+      f.input :email
+      f.input :points
+      f.input :avatar
+    end
+    f.actions
+  end
 
 end
