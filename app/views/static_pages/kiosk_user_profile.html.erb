@@ -10,8 +10,9 @@
           <%= image_tag 'medal_gold_1.png', style: 'display: inline;' %>
           <h3 style="display: inline"><b><%= @user.points %></b></h3>
         </div>
-        <div class="col-lg-3">
-          <%= link_to "Video Call", video_call_path %>
+        <div class="col-lg-3 col-lg-offset-1">
+          <br>
+          <%= link_to "<i class='ion-ios-videocam-outline'></i> Tech Support".html_safe, video_call_path, class: 'btn btn-primary' %>
         </div>
       </div>
     </div>
