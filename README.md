@@ -4,7 +4,6 @@ Internet of Things application that redefines consumer shopping experience using
 ![smart_kiosk_tech_stack](https://user-images.githubusercontent.com/1825853/27051610-b3ce70a0-4f84-11e7-9f28-72e6ac648954.jpg)
 
 ## What It Is
------------
 Smart Kiosk is an product for revolutionizing retail shopping experience. Harnessing the power of Internet of Things, we have developed a product solution that would dynamically change the perspective of brick and mortar shopping experience.
 
 ## How it works
@@ -21,5 +20,4 @@ When each customer enters the store, the store manager is notified about it on h
 - Twilio
 
 ## License
----------
 GNU GENERAL PUBLIC LICENSE
